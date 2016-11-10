@@ -1,7 +1,18 @@
 #ifndef GAME_H_
 #define GAME_H_
 
-#include <iostream
+#include <iostream>
+
+#include "Player.h"
+#include "Deck.h"
+
+using namespace std;
+
+class Game {
+private:
+	vector<Player *> players;  //The list of the players
+	Deck deck;                 //The deck of the game
+public:
 	Game(char* configurationFile);
 	void init();
 	void play();
